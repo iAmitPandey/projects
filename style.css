@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #191919;
+  --card-bg: #064663;
+  --text-color-primary: #fafafa;
+}
+
+body {
+  background-color: var(--text-color-primary);
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  padding: 2rem 5rem 1rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.heading-1 {
+  font-size: 1.5rem;
+  color: var(--text-color-primary);
+}
+
+.search-input {
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input form {
+  border: 2px solid var(--card-bg);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input form input {
+  padding: 8px;
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: var(--text-color-primary);
+}
+
+.search-input form button {
+  background-color: transparent;
+  padding: 4px;
+  margin: 2px;
+  color: var(--text-color-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  min-height: 72vh;
+  margin: 0 auto;
+  margin-block: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 0 10px #ccc;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.image-container {
+  height: 450px;
+  margin-right: 30px;
+  border-radius: 5px 0 0 5px;
+}
+.movie-image {
+  height: 100%;
+
+  border-radius: 5px 0 0 5px;
+}
+
+.movie-details {
+  padding: 15px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin: 12px 0 12px 0;
+}
+
+.star-rating {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 8px;
+}
+
+.genre p {
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  padding: 5px 14px;
+  margin-inline: 5px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+.movie-details p {
+  font-size: 16px;
+  margin-block: 16px;
+  line-height: 24px;
+}
+
+.main.none {
+  background: none;
+  box-shadow: none;
+}
+/* footer */
+
+.footer {
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  padding-block: 20px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 950px) {
+  .main {
+    flex-direction: column;
+  }
+  .image-container,
+  .movie-image {
+    width: 100%;
+    height: fit-content;
+  }
+  .genre {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+  }
+  .heading-1,
+  .search-input {
+    padding: 6px;
+  }
+}
